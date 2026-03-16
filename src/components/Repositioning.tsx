@@ -17,7 +17,7 @@ export function Repositioning() {
           
           <div className="text-lg md:text-xl text-gray-600 space-y-6 max-w-3xl mx-auto leading-relaxed text-left md:text-center">
             <p>
-              We're not going to pitch you on a $1,500/month retainer before you've seen a single edit.
+              We're not going to pitch you on a $899/month retainer before you've seen a single edit.
             </p>
             <p>
               <strong className="text-brand-navy">Start with one video.</strong> Upload your footage, give us the brief, and see exactly what your content looks like in our hands — polished, platform-ready, and on-brand.

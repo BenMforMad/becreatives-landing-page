@@ -89,14 +89,27 @@ export function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto"
         >
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="aspect-[9/16] bg-gray-200 rounded-xl relative overflow-hidden group cursor-pointer">
-              <img src={`https://picsum.photos/seed/testim${i}/400/700`} alt="Video Testimonial" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" referrerPolicy="no-referrer" />
+          {[
+            { img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80", tag: "Real Estate" },
+            { img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80", tag: "Medical" },
+            { img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80", tag: "Creator" },
+            { img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80", tag: "Agency" }
+          ].map((video, i) => (
+            <div key={i} className="aspect-[9/16] bg-gray-200 rounded-xl relative overflow-hidden group cursor-pointer shadow-sm border border-gray-100">
+              <img src={video.img} alt={`${video.tag} Testimonial`} className="w-full h-full object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-500" referrerPolicy="no-referrer" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+              
+              <div className="absolute bottom-4 left-4 right-4 text-left">
+                <span className="text-white text-xs font-bold uppercase tracking-wider bg-black/40 backdrop-blur-sm px-2 py-1 rounded">
+                  {video.tag}
+                </span>
+              </div>
+
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <PlayCircle className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform border border-white/40">
+                  <PlayCircle className="w-8 h-8 text-white ml-1" />
                 </div>
               </div>
             </div>
