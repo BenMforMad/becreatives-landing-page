@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 
 const HomePage = lazy(() => import('./pages/home/HomePage'));
+const Landing1Page = lazy(() => import('./pages/landing1/Landing1Page'));
 const Landing2Page = lazy(() => import('./pages/landing2/Landing2Page'));
 const Landing3Page = lazy(() => import('./pages/landing3/Landing3Page'));
 const Landing4Page = lazy(() => import('./pages/landing4/Landing4Page'));
@@ -14,6 +15,14 @@ const router = createBrowserRouter([
     element: (
       <Suspense>
         <HomePage />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/landing1',
+    element: (
+      <Suspense>
+        <Landing1Page />
       </Suspense>
     ),
   },
