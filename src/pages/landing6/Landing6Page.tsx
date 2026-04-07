@@ -321,8 +321,9 @@ export default function Landing6Page() {
     const root = scopeRef.current;
     if (!root) return;
 
-    // Force light theme to match the original design
-    root.setAttribute('data-theme', 'light');
+    // Auto-detect dark mode preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
 
     // Mobile nav toggle
     const navToggle = root.querySelector<HTMLButtonElement>('.nav-toggle');
