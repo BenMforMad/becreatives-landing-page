@@ -8,6 +8,8 @@ const Landing1Page = lazy(() => import('./pages/landing1/Landing1Page'));
 const Landing2Page = lazy(() => import('./pages/landing2/Landing2Page'));
 const Landing3Page = lazy(() => import('./pages/landing3/Landing3Page'));
 const Landing4Page = lazy(() => import('./pages/landing4/Landing4Page'));
+const Landing5Page = lazy(() => import('./pages/landing5/Landing5Page'));
+const Landing6Page = lazy(() => import('./pages/landing6/Landing6Page'));
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,22 @@ const router = createBrowserRouter([
     element: (
       <Suspense>
         <Landing4Page />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/landing5',
+    element: (
+      <Suspense>
+        <Landing5Page />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/landing6',
+    element: (
+      <Suspense>
+        <Landing6Page />
       </Suspense>
     ),
   },

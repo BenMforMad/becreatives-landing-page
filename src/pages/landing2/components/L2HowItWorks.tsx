@@ -74,7 +74,7 @@ export function L2HowItWorks() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <p className="text-sm text-gray-400 mt-3">
-            Get a clear picture of output and turnaround based on your client roster.
+            Share your client list and video volume — we'll show you what we can take off your plate.
           </p>
         </motion.div>
       </div>
