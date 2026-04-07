@@ -28,8 +28,9 @@
   line-height: 1.6;
   font-family: var(--font-body, sans-serif);
   font-size: var(--text-base);
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: #1A1A1A;
+  background-color: #FAFAF8;
+  color-scheme: light;
 }
 
 .landing6-scope img,
